@@ -5,7 +5,7 @@
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:link {
@@ -14,10 +14,9 @@ a:link {
 
 html,
 body {
-  background-color: black;
   height: 100vh;
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: black;
 }
 
 body {
@@ -37,7 +36,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 .gallery {
@@ -57,6 +56,14 @@ header {
 
 .project-description {
   margin-top: 0.5em;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0;
+  font-size: 1em;
 }
 
 .about-description {
@@ -98,17 +105,11 @@ footer,
 }
 
 .border {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
-/*.flex-image {
-  max-width: 90%;
-  height: auto;
-  margin: 5px;
-}*/
-
 .flex-item {
-  height: 170px;
+  height: 200px;
   max-width: 200px;
   padding: 0.3em;
   flex-grow: 1;
@@ -134,7 +135,7 @@ footer,
 .back-btn {
   display: flex;
   flex-direction: row;
-  border: 1px solid white;
+  border: 1px solid black;
   align-self: flex-start;
 }
 
@@ -162,8 +163,8 @@ footer,
   top: 9%;
   right: 9%;
   z-index: 1;
-  border: 1px solid white;
-  background-color: black;
+  border: 1px solid black;
+  background-color: white;
   padding: 5px 5px;
   min-width: 160px;
   max-width: 280px;
@@ -186,12 +187,40 @@ footer,
   display: block;
 }
 
+/* Hovering images */
+.project-one-img {
+  display: none;
+}
+
+.project-two-img {
+  display: none;
+}
+
+.project-three-img {
+  display: none;
+}
+
+.project-four-img {
+  display: none;
+}
+
 @media screen and (min-width: 600px) {
+  header,
+  footer,
+  .gallery {
+    padding: 1em;
+  }
+
   .flex-container {
     display: flex;
     flex-direction: column;
     margin-top: 8em;
   }
+
+  .menu-tag {
+    font-size: 1.1em;
+  }
+
   .header {
     display: flex;
     flex-direction: row;
@@ -206,15 +235,38 @@ footer,
 
   .flex-item {
     background: tomato;
-    width: 250px;
-    height: 250px;
+    max-width: 400px;
+    height: 500px;
     object-fit: cover;
     margin: 5px;
     line-height: 150px;
-    color: white;
     font-weight: bold;
     font-size: 3em;
     text-align: center;
+  }
+
+  .about-container {
+    flex-direction: row;
+    max-width: 700px;
+    font-size: 1.1em;
+    margin-top: 3.2em;
+  }
+
+  .about-description {
+    text-align: left;
+    padding-top: 0;
+    line-height: 1.6;
+    max-width: 50%;
+    margin-top: 0;
+  }
+
+  .contact {
+    margin-top: 0;
+    line-height: normal;
+  }
+
+  .contact-item {
+    margin-top: 0;
   }
 
   .specific-project-container {
@@ -245,6 +297,38 @@ footer,
   .frontpage-img {
     overflow: hidden;
   }
+
+  #project-one:hover ~ .project-one-img {
+    display: block;
+    position: relative;
+    left: 38%;
+    top: -10%;
+    height: 600px;
+  }
+
+  #project-two:hover ~ .project-two-img {
+    display: block;
+    position: relative;
+    left: 38%;
+    top: -10%;
+    height: 600px;
+  }
+
+  #project-three:hover ~ .project-three-img {
+    display: block;
+    position: relative;
+    left: 38%;
+    top: -10%;
+    height: 600px;
+  }
+
+  #project-four:hover ~ .project-four-img {
+    display: block;
+    position: relative;
+    left: 38%;
+    top: -10%;
+    height: 600px;
+  }
 }
 
 #logo {
@@ -268,5 +352,5 @@ footer,
   font-weight: 400;
   font-size: 20px;
   line-height: 52px;
-  color: white;
+  color: black;
 }
