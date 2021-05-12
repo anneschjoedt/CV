@@ -46,6 +46,10 @@ header {
   justify-content: center;
 }
 
+.project-div {
+  margin-top: 100px;
+}
+
 .project-container {
   display: flex;
   flex-flow: column;
@@ -258,6 +262,7 @@ footer,
     line-height: 1.6;
     max-width: 50%;
     margin-top: 0;
+    margin-right: 70px;
   }
 
   .contact {
@@ -328,6 +333,64 @@ footer,
     left: 38%;
     top: -10%;
     height: 600px;
+  }
+
+  .img {
+    margin: 0.5em;
+    max-width: 25%;
+  }
+
+  .animation {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
